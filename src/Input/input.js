@@ -1,6 +1,7 @@
 import "./style.css";
 const Input = () => (
   <input
+    // value={newExchangeValue}
     className="input"
     required
     type="number"
