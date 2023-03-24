@@ -7,6 +7,7 @@ import { Select } from "./Select";
 import { Form } from "./Form";
 import { Input } from "./Input/input";
 import { Button } from "./Button";
+import { ReturnValue } from "./ReturnValue";
 
 function App() {
   return (
@@ -19,9 +20,7 @@ function App() {
         label={<Label title="Amount" extraLabelContent={<Input />} />}
         button={<Button />}
       />
-      <p className="form__return">
-        You will receive: <span> N/A</span>
-      </p>
+      <ReturnValue title=" You will receive: " />
     </Container>
   );
 }
