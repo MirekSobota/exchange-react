@@ -1,11 +1,14 @@
 import "./style.css";
 import { useState } from "react";
-const Input = () => {
-  const [newExchangeValue, setNewExchangeValue] = useState("");
-  const onInputChange = ({target}) =>  setNewExchangeValue(target.value);
+const Input = ({getNewInputValue}) => {
+  const [newInputValue, setNewInputValue] = useState("");
+  const onInputChange = ({target}) =>  setNewInputValue(target.value);
+  getNewInputValue(newInputValue.trim());
+  // setNewInputValue("");
+
   return (
     <input
-      value={newExchangeValue}
+      value={newInputValue}
       className="input"
       required
       type="number"

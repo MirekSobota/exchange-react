@@ -10,7 +10,13 @@ import { Button } from "./Button";
 import { ReturnValue } from "./ReturnValue";
 import { SubContainer } from "./SubContainer";
 
+
 function App() {
+
+  const getNewInputValue = (newInputValue) => {
+    console.log(newInputValue)
+  };
+
   return (
     <Container>
       <Header title="Currency converter" />
@@ -22,7 +28,7 @@ function App() {
       <SubContainer>
         <Label title="Currency" extraLabelContent={<Select />} />
         <Form
-          label={<Label title="Amount" extraLabelContent={<Input />} />}
+          label={<Label title="Amount" extraLabelContent={<Input getNewInputValue={getNewInputValue}/>} />}
           button={<Button />}
         />
         <ReturnValue title=" You will receive: " />
