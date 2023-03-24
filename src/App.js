@@ -1,8 +1,10 @@
-
+import Container from "./Container";
 
 function App() {
   return (
-   <div></div>
+  <Container>
+     <div>Tekst</div>
+  </Container>
   );
 }
 
