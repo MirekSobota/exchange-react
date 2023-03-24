@@ -1,7 +1,7 @@
 const Label = ({ title, extraLabelContent }) => (
-  <label className="form__label form__flex">
+  <label className="label">
     {title}
-    <br/>
+    <br />
     {extraLabelContent}
   </label>
 );

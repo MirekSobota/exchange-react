@@ -1,6 +1,8 @@
+import "./style.css";
+
 const Button = () => (
   <p>
-    <button className="form__button">Exchange</button>
+    <button className="button">Exchange</button>
   </p>
 );
 

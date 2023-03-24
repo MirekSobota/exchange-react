@@ -1,6 +1,6 @@
 const Form = ({ label, button }) => (
   <>
-    <form className="form">
+    <form>
       {label}
       {button}
     </form>

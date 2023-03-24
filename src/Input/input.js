@@ -1,6 +1,7 @@
+import "./style.css";
 const Input = () => (
   <input
-    className="form__filed"
+    className="input"
     required
     type="number"
     min="1"
@@ -9,4 +10,4 @@ const Input = () => (
   />
 );
 
-export {Input};
+export { Input };

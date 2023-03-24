@@ -1,0 +1,16 @@
+.button {
+  width: 100%;
+  background: rgb(0, 128, 128);
+  color: white;
+  border: none;
+  border-radius: 2px;
+  padding: 3px;
+}
+
+.button:hover {
+  background: rgb(1, 102, 102);
+}
+
+.button:active {
+  background: rgb(1, 82, 82);
+}

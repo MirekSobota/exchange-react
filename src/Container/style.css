@@ -1,9 +1,9 @@
 .container {
-    max-width: 650px;
-    width: auto;
-    margin: 0 auto;
-    padding: 20px 15px;
-    border: solid 1px black;
-    font-family: 'Lato', sans-serif;
-  }
-  
+  max-width: 850px;
+  width: auto;
+  margin: 150px auto;
+  padding: 20px;
+  border: solid 1px black;
+  background: white;
+  font-family: "Lato", sans-serif;
+}

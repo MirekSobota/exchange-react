@@ -4,4 +4,4 @@ const Container = ({ children }) => (
   <main className="container">{children}</main>
 );
 
-export {Container};
+export { Container };
