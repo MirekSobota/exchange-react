@@ -8,19 +8,25 @@ import { Form } from "./Form";
 import { Input } from "./Input/input";
 import { Button } from "./Button";
 import { ReturnValue } from "./ReturnValue";
+import { SubContainer } from "./SubContainer";
 
 function App() {
   return (
     <Container>
       <Header title="Currency converter" />
-      <SubHeader title="The current exchange rate" />
-      <List />
-      <Label title="Currency" extraLabelContent={<Select />} />
-      <Form
-        label={<Label title="Amount" extraLabelContent={<Input />} />}
-        button={<Button />}
-      />
-      <ReturnValue title=" You will receive: " />
+      <SubContainer>
+        <SubHeader title="The current exchange rate" />
+        <List />
+      </SubContainer>
+
+      <SubContainer>
+        <Label title="Currency" extraLabelContent={<Select />} />
+        <Form
+          label={<Label title="Amount" extraLabelContent={<Input />} />}
+          button={<Button />}
+        />
+        <ReturnValue title=" You will receive: " />
+      </SubContainer>
     </Container>
   );
 }
