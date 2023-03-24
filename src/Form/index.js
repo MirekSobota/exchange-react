@@ -1,12 +1,10 @@
-const Form = ({label}) => (
-<>
-<form className="form">
-    {label}
-<p>
-<button className="form__button">Exchange</button>
-</p>
-</form>
-</>
+const Form = ({ label, button }) => (
+  <>
+    <form className="form">
+      {label}
+      {button}
+    </form>
+  </>
 );
- 
-export {Form};
+
+export { Form };
