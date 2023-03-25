@@ -1,7 +1,7 @@
 import "./style.css";
 
 const SubContainer = ({ children }) => (
-  <main className="subContainer">{children}</main>
+  <div className="subContainer">{children}</div>
 );
 
 export { SubContainer };

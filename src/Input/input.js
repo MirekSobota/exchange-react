@@ -1,8 +1,8 @@
 import "./style.css";
 import { useState } from "react";
-const Input = ({getNewInputValue}) => {
+const Input = ({ getNewInputValue }) => {
   const [newInputValue, setNewInputValue] = useState("");
-  const onInputChange = ({target}) =>  setNewInputValue(target.value);
+  const onInputChange = ({ target }) => setNewInputValue(target.value);
   getNewInputValue(newInputValue.trim());
   // setNewInputValue("");
 

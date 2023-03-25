@@ -1,4 +1,4 @@
 import "./style.css";
-const ReturnValue = ({ title }) => <p className="returnValue">{title}</p>;
+const ReturnValue = ({ title, getNewInputValue  }) => <p className="returnValue">{title} {getNewInputValue}</p>;
 
 export { ReturnValue };

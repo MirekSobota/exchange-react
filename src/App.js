@@ -9,14 +9,16 @@ import { Input } from "./Input/input";
 import { Button } from "./Button";
 import { ReturnValue } from "./ReturnValue";
 import { SubContainer } from "./SubContainer";
-
+import { useState } from "react";
 
 function App() {
+  const [inputValue, setInputValue] = useState(0);
 
   const getNewInputValue = (newInputValue) => {
-    console.log(newInputValue)
+    setInputValue((inputValue) => newInputValue )
   };
 
+  // console.log(getNewInputValue());
   return (
     <Container>
       <Header title="Currency converter" />
@@ -28,10 +30,15 @@ function App() {
       <SubContainer>
         <Label title="Currency" extraLabelContent={<Select />} />
         <Form
-          label={<Label title="Amount" extraLabelContent={<Input getNewInputValue={getNewInputValue}/>} />}
+          label={
+            <Label
+              title="Amount"
+              extraLabelContent={<Input getNewInputValue={getNewInputValue} />}
+            />
+          }
           button={<Button />}
         />
-        <ReturnValue title=" You will receive: " />
+        <ReturnValue title="You will receive: " getNewInputValue={getNewInputValue}  />
       </SubContainer>
     </Container>
   );
