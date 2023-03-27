@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./style.css";
 
-const Form = ({ getNewInputValue }) => {
+const Form = ({ select, getNewInputValue }) => {
   const [newInputValue, setNewInputValue] = useState("");
   const onInputChange = ({ target }) => setNewInputValue(target.value);
   const onFormSubmit = (event) => {
@@ -12,6 +12,7 @@ const Form = ({ getNewInputValue }) => {
 
   return (
     <form onSubmit={onFormSubmit} className="form ">
+      {select}
       <input
         value={newInputValue}
         className="form__input"

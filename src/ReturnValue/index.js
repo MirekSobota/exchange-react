@@ -1,6 +1,10 @@
 import "./style.css";
- const ReturnValue = ({ title, getNewInputValue, getNewCurrency }) => {
-    return <p className="returnValue">{title} {getNewInputValue()} {getNewCurrency()}</p>;
-  };
+const ReturnValue = ({ title, result }) => {
+  return (
+    <p className="returnValue">
+      {title} {result}
+    </p>
+  );
+};
 
 export { ReturnValue };
