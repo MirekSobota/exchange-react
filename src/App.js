@@ -5,40 +5,35 @@ import { List } from "./List";
 import { Label } from "./Label";
 import { Select } from "./Select";
 import { Form } from "./Form";
-import { Input } from "./Input/input";
-import { Button } from "./Button";
 import { ReturnValue } from "./ReturnValue";
 import { SubContainer } from "./SubContainer";
 import { useState } from "react";
 
 function App() {
   const [inputValue, setInputValue] = useState(0);
+  const [selectCurrency, setSelectCurrency] = useState("");
 
   const getNewInputValue = (newInputValue) => {
-    setInputValue((inputValue) => newInputValue )
+    setInputValue(Number(newInputValue));
   };
 
-  // console.log(getNewInputValue());
+  // const getNewCurrency = (selectCurrency) => setSelectCurrency(selectCurrency);
+
   return (
     <Container>
       <Header title="Currency converter" />
       <SubContainer>
         <SubHeader title="The current exchange rate" />
         <List />
-      </SubContainer>
-
-      <SubContainer>
-        <Label title="Currency" extraLabelContent={<Select />} />
-        <Form
-          label={
-            <Label
-              title="Amount"
-              extraLabelContent={<Input getNewInputValue={getNewInputValue} />}
-            />
-          }
-          button={<Button />}
+        <Label title="Currency" extraLabelContent={<Select selectCurrency={selectCurrency} setSelectCurrency={setSelectCurrency} />} />
+        <Form         
+          getNewInputValue={getNewInputValue}
         />
-        <ReturnValue title="You will receive: " getNewInputValue={getNewInputValue}  />
+        <ReturnValue
+          title="You will receive: "
+          getNewInputValue={() => inputValue}
+          getNewCurrency={() => selectCurrency}
+        />
       </SubContainer>
     </Container>
   );
