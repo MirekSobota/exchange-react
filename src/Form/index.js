@@ -1,20 +1,18 @@
-import { useState } from "react";
+// import { useState } from "react";
 import "./style.css";
 
-const Form = ({ select, getNewInputValue }) => {
-  const [newInputValue, setNewInputValue] = useState("");
-  const onInputChange = ({ target }) => setNewInputValue(target.value);
-  const onFormSubmit = (event) => {
-    event.preventDefault();
-    getNewInputValue(newInputValue.trim());
-    setNewInputValue("");
-  };
-
+const Form = ({
+  select,
+  onChange,
+  inputValue,
+  onFormSubmit,
+  setInputValue,
+}) => {
   return (
     <form onSubmit={onFormSubmit} className="form ">
       {select}
       <input
-        value={newInputValue}
+        value={inputValue}
         className="form__input"
         required
         type="number"
@@ -22,7 +20,7 @@ const Form = ({ select, getNewInputValue }) => {
         min="1"
         step="any"
         placeholder="Amount PLN:"
-        onChange={onInputChange}
+        onChange={onChange(setInputValue)}
       />
 
       <p>
