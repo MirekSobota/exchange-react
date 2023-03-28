@@ -11,12 +11,6 @@ const List = () => (
     <li>
       GBP/PLN:<span className="list--rate list__flex"></span>
     </li>
-    <li>
-      BTC/PLN:<span className="list--rate list__flex"></span>
-    </li>
-    <li>
-      SVC/PLN:<span className="list--rate list__flex"></span>
-    </li>
   </ul>
 );
 

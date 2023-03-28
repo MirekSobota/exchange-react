@@ -1,9 +1,12 @@
 import "./style.css";
-const Select = ({ selectCurrency, setSelectCurrency }) => {
-  const onSelectChange = ({ target }) => setSelectCurrency(target.value);
+const Select = ({ selectCurrency, setSelectCurrency, onChange }) => {
   return (
-    <select className="select" value={selectCurrency} onChange={onSelectChange}>
-      <option value="EUR">EURO</option>
+    <select
+      className="select"
+      value={selectCurrency}
+      onChange={onChange(setSelectCurrency)}
+    >
+      <option value="EURO">EURO</option>
       <option value="USD">USD</option>
       <option value="GBP">GBP</option>
     </select>
