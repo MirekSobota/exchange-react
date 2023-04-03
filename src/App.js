@@ -107,7 +107,7 @@ function App() {
       <Header title="Currency converter" />
       <SubContainer>
         <SubHeader title="The current exchange rate" />
-        <List rates={rates}/>
+        <List rates={rates} />
 
         <Form
           select={
@@ -127,7 +127,11 @@ function App() {
           onFormSubmit={onFormSubmit}
           setInputValue={setInputValue}
         />
-        <ReturnValue title="You will receive:  " result={result} selectCurrency={selectCurrency} />
+        <ReturnValue
+          title="You will receive:  "
+          result={result}
+          selectCurrency={selectCurrency}
+        />
       </SubContainer>
     </Container>
   );
