@@ -1,16 +1,13 @@
 import "./style.css";
 
-const List = () => (
+const List = ({ rates }) => (
   <ul className="list list__flex">
-    <li>
-      EUR/PLN:<span className="list--rate list__flex"></span>
-    </li>
-    <li>
-      USD/PLN:<span className="list--rate list__flex"></span>
-    </li>
-    <li>
-      GBP/PLN:<span className="list--rate list__flex"></span>
-    </li>
+    {rates.map((currency) => (
+      <li key={currency.id}>
+        {currency.name}
+        <span className="list--rate list__flex">{currency.rate}</span>
+      </li>
+    ))}
   </ul>
 );
 
