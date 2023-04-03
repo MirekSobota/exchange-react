@@ -1,9 +1,10 @@
 import "./style.css";
-const ReturnValue = ({ title, result }) => {
+const ReturnValue = ({ title, result, selectCurrency }) => {
   return (
     <p className="returnValue">
-      {title} 
+      {title}
       {result}
+      {selectCurrency}
     </p>
   );
 };

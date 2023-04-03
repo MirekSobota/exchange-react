@@ -11,8 +11,8 @@ import { useState } from "react";
 
 function App() {
   const [inputValue, setInputValue] = useState("");
-  const [selectCurrency, setSelectCurrency] = useState("");
-  // const [currencyInput, setCurrencyInput] = useState([]);
+  const [selectCurrency, setSelectCurrency] = useState("EURO");
+  // const [currencyRateValue, setCurrencyRateValue] = useState("");
   // const [newInputValue, setNewInputValue] = useState("");
 
   const onChange =
@@ -27,11 +27,11 @@ function App() {
     setInputValue("");
   };
 
-  // const rates = [
-  //   { id: 1, EURO: 4.5 },
-  //   { id: 2, USD: 4.2 },
-  //   { id: 3, GBP: 4.85 },
-  // ];
+  const rates = [
+    { id: 1, name: "EURO", rate: 4.5 },
+    { id: 2, name: "USD", rate: 4.2 },
+    { id: 3, name: "GBP", rate: 4.85 },
+  ];
 
   // Works with RESULT v1.0 / 2.0
   // const rates = {
@@ -91,14 +91,23 @@ function App() {
     setInputValue(Number(inputValue));
   };
 
-  const result = inputValue;
+  const currencyRate = rates.find(
+    (currency) => currency.name === selectCurrency
+  );
+
+  const currencyInput = currencyRate ? currencyRate.rate : 0;
+
+  const calculatingResult = (inputValue, currencyInput) =>
+    (inputValue / currencyInput).toFixed(2);
+
+  const result = calculatingResult(inputValue, currencyInput);
 
   return (
     <Container>
       <Header title="Currency converter" />
       <SubContainer>
         <SubHeader title="The current exchange rate" />
-        <List />
+        <List rates={rates}/>
 
         <Form
           select={
@@ -118,7 +127,7 @@ function App() {
           onFormSubmit={onFormSubmit}
           setInputValue={setInputValue}
         />
-        <ReturnValue title="You will receive:" result={inputValue} />
+        <ReturnValue title="You will receive:  " result={result} selectCurrency={selectCurrency} />
       </SubContainer>
     </Container>
   );
