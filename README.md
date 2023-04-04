@@ -1,8 +1,12 @@
 # Exchange currency
 
 ## Description
+Online currency exchange allows you to simply select a currency from the list and add the amount in PLN. This web application is my second React.js app.
 
+Warning! The price is not valid, it is just a demo.
 ## Demo
+
+https://mireksobota.github.io/exchange_react/
 
 ![Exchange_demo](https://github.com/MirekSobota/exchange_react/blob/main/public/Exchange_demo.gif)
 ## Technologies
