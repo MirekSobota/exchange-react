@@ -13,15 +13,3 @@
   justify-content: space-around;
   align-items: center;
 }
-
-@media (max-width: 767px) {
-  .list {
-    list-style: none;
-    font-style: italic;
-    padding: 0;
-  }
-
-  .list--rate {
-    font-weight: bold;
-  }
-}

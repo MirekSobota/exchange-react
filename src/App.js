@@ -57,7 +57,6 @@ function App() {
         <Header title="Currency converter" />
         <SubHeader title="The current exchange rate" />
         <List rates={rates} />
-
         <Form
           select={
             <Label

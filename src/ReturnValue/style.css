@@ -1,6 +1,5 @@
 .returnValue {
     padding: 10px;
-    display: grid;
     display: flex;
     justify-content: center;
     align-items: center;
