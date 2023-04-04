@@ -48,8 +48,8 @@ function App() {
 
   return (
     <Container>
-      <Header title="Currency converter" />
       <SubContainer>
+      <Header title="Currency converter" />
         <SubHeader title="The current exchange rate" />
         <List rates={rates} />
 
