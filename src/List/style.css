@@ -23,9 +23,5 @@
 
   .list--rate {
     font-weight: bold;
-
-  }
-  .list__flex {
-    display: grid;
   }
 }

@@ -44,12 +44,17 @@ function App() {
   const currencyInput = currencyRate ? currencyRate.rate : 0;
 
   const calculatingResult = (inputValue, currencyInput) =>
-    `${ inputValue + " PLN  = " + (inputValue / currencyInput).toFixed(2) + selectCurrency}`;
+    `${
+      inputValue +
+      " PLN  = " +
+      (inputValue / currencyInput).toFixed(2) +
+      selectCurrency
+    }`;
 
   return (
     <Container>
       <SubContainer>
-      <Header title="Currency converter" />
+        <Header title="Currency converter" />
         <SubHeader title="The current exchange rate" />
         <List rates={rates} />
 
@@ -71,7 +76,7 @@ function App() {
           onFormSubmit={onFormSubmit}
           setInputValue={setInputValue}
         />
-        <ReturnValue  result={result} />
+        <ReturnValue result={result} />
       </SubContainer>
     </Container>
   );

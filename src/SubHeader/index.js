@@ -1,6 +1,7 @@
+import "./style.css";
 const SubHeader = ({ title }) => (
   <header>
-    <h2>{title}</h2>
+    <h2 className="subHeader">{title}</h2>
   </header>
 );
 
