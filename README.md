@@ -1,6 +1,10 @@
 # Exchange currency
 
 ## Description
+
+## Demo
+
+![Exchange_demo](https://github.com/MirekSobota/exchange_react/blob/main/public/Exchange_demo.gif)
 ## Technologies
 - HTML
 - CSS 
