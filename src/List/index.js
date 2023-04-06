@@ -5,7 +5,7 @@ const List = ({ rates }) => (
     {rates.map((currency) => (
       <li key={currency.id}>
         {currency.name}
-        <span className="list--rate list__flex">{currency.rate}</span>
+        <span className="list__rate list__flex">{currency.rate}</span>
       </li>
     ))}
   </ul>

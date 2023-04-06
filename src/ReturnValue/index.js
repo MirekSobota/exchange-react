@@ -1,5 +1,6 @@
 import "./style.css";
-const ReturnValue = ({  result }) => {
+
+const ReturnValue = ({ result }) => {
   return (
     <p className="returnValue">
       {result}

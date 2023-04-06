@@ -8,6 +8,7 @@ import { Form } from "./Form";
 import { ReturnValue } from "./ReturnValue";
 import { SubContainer } from "./SubContainer";
 import { useState } from "react";
+// import { Currencies } from "./Currencies"
 
 function App() {
   const [inputValue, setInputValue] = useState("");
@@ -15,9 +16,9 @@ function App() {
   const [result, setResult] = useState("");
   const onChange =
     (setter) =>
-    ({ target }) => {
-      setter(target.value);
-    };
+      ({ target }) => {
+        setter(target.value);
+      };
 
   const onFormSubmit = (event) => {
     event.preventDefault();
@@ -27,28 +28,27 @@ function App() {
     setResult(resultValue);
   };
 
-  const rates = [
+  const currencies = [
     { id: 1, name: "EURO", rate: 4.55 },
     { id: 2, name: "USD", rate: 3.95 },
     { id: 3, name: "GBP", rate: 4.85 },
   ];
 
   const getNewInputValue = (inputValue) => {
-    setInputValue(Number(inputValue));
+    setInputValue(inputValue);
   };
 
-  const currencyRate = rates.find(
+  const currencyRate = currencies.find(
     (currency) => currency.name === selectCurrency
   );
 
   const currencyInput = currencyRate ? currencyRate.rate : 0;
 
   const calculatingResult = (inputValue, currencyInput) =>
-    `${
-      inputValue +
-      " PLN  = " +
-      (inputValue / currencyInput).toFixed(2) +
-      selectCurrency
+    `${inputValue +
+    " PLN  = " +
+    (inputValue / currencyInput).toFixed(2) +
+    selectCurrency
     }`;
 
   return (
@@ -56,7 +56,7 @@ function App() {
       <SubContainer>
         <Header title="Currency converter" />
         <SubHeader title="The current exchange rate" />
-        <List rates={rates} />
+        <List rates={currencies} />
         <Form
           select={
             <Label
