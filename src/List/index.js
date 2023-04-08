@@ -1,8 +1,8 @@
 import "./style.css";
 
-const List = ({ rates }) => (
+const List = ({ currencies }) => (
   <ul className="list list__flex">
-    {rates.map((currency) => (
+    {currencies.map((currency) => (
       <li key={currency.id}>
         {currency.name}
         <span className="list__rate list__flex">{currency.rate}</span>

@@ -54,7 +54,7 @@ function App() {
       <SubContainer>
         <Header title="Currency converter" />
         <SubHeader title="The current exchange rate" />
-        <List rates={currencies} />
+        <List currencies={currencies} />
         <Form
           select={
             <Label
@@ -63,6 +63,7 @@ function App() {
                 <Select
                   selectCurrency={selectCurrency}
                   onChange={onChange(setSelectCurrency)}
+                  currencies={currencies}
                 />
               }
             />
