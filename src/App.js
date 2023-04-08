@@ -5,36 +5,33 @@ import { List } from "./List";
 import { Label } from "./Label";
 import { Select } from "./Select";
 import { Form } from "./Form";
-import { ReturnValue } from "./ReturnValue";
+import { Result } from "./Result";
 import { SubContainer } from "./SubContainer";
 import { useState } from "react";
-// import { Currencies } from "./Currencies"
+import { currencies } from "./Currencies/currencies";
 
 function App() {
   const [inputValue, setInputValue] = useState("");
   const [selectCurrency, setSelectCurrency] = useState("EURO");
   const [result, setResult] = useState("");
+
   const onChange =
     (setter) =>
-      ({ target }) => {
-        setter(target.value);
-      };
+    ({ target }) => {
+      setter(target.value);
+    };
 
   const onFormSubmit = (event) => {
     event.preventDefault();
-    getNewInputValue(inputValue);
+
+    const resultValue = calculateResult(inputValue, currencyInput);
+
+    setNewInputValue(inputValue);
     setInputValue("");
-    const resultValue = calculatingResult(inputValue, currencyInput);
     setResult(resultValue);
   };
 
-  const currencies = [
-    { id: 1, name: "EURO", rate: 4.55 },
-    { id: 2, name: "USD", rate: 3.95 },
-    { id: 3, name: "GBP", rate: 4.85 },
-  ];
-
-  const getNewInputValue = (inputValue) => {
+  const setNewInputValue = (inputValue) => {
     setInputValue(inputValue);
   };
 
@@ -44,11 +41,12 @@ function App() {
 
   const currencyInput = currencyRate ? currencyRate.rate : 0;
 
-  const calculatingResult = (inputValue, currencyInput) =>
-    `${inputValue +
-    " PLN  = " +
-    (inputValue / currencyInput).toFixed(2) +
-    selectCurrency
+  const calculateResult = (inputValue, currencyInput) =>
+    `${
+      inputValue +
+      " PLN  = " +
+      (inputValue / currencyInput).toFixed(2) +
+      selectCurrency
     }`;
 
   return (
@@ -64,8 +62,7 @@ function App() {
               extraLabelContent={
                 <Select
                   selectCurrency={selectCurrency}
-                  setSelectCurrency={setSelectCurrency}
-                  onChange={onChange}
+                  onChange={onChange(setSelectCurrency)}
                 />
               }
             />
@@ -75,7 +72,7 @@ function App() {
           onFormSubmit={onFormSubmit}
           setInputValue={setInputValue}
         />
-        <ReturnValue result={result} />
+        <Result result={result} />
       </SubContainer>
     </Container>
   );

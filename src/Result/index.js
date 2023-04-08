@@ -1,6 +1,6 @@
 import "./style.css";
 
-const ReturnValue = ({ result }) => {
+const Result = ({ result }) => {
   return (
     <p className="returnValue">
       {result}
@@ -8,4 +8,4 @@ const ReturnValue = ({ result }) => {
   );
 };
 
-export { ReturnValue };
+export { Result };
