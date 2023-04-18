@@ -23,6 +23,15 @@ function App() {
     return () => clearInterval(intervalId);
   }, []);
 
+  const formattedDate = date.toLocaleString(undefined, {
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+  });
+
   const onChange =
     (setter) =>
     ({ target }) => {
@@ -60,7 +69,7 @@ function App() {
   return (
     <Container>
       <SubContainer>
-        <Header title="Currency converter" date={date} />
+        <Header title="Currency converter" formattedDate={formattedDate} />
         <SubHeader title="The current exchange rate" />
         <List currencies={currencies} />
         <Form
