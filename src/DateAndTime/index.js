@@ -9,8 +9,10 @@ const DateAndTime = ({ date }) => {
     day: "numeric",
     month: "long",
   });
-
-  <div className="header__date">Today is {formattedDate}</div>;
+return (
+  <div className="header__date">Today is {formattedDate}</div>
+);
+  
 };
 
 export { DateAndTime };

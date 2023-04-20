@@ -61,9 +61,8 @@ function App() {
   return (
     <Container>
       <SubContainer>
-        
-        <Header title="Currency converter" />
         <DateAndTime date={date} />
+        <Header title="Currency converter" />
         <SubHeader title="The current exchange rate" />
         <List currencies={currencies} />
         <Form
