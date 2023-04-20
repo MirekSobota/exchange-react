@@ -1,0 +1,6 @@
+.header__date {
+    font-family: "Chivo Mono", monospace;
+    font-size: x-small;
+    display: flex;
+    justify-content: flex-end;
+  }

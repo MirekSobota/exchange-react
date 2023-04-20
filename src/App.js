@@ -9,6 +9,7 @@ import { Result } from "./Result";
 import { SubContainer } from "./SubContainer";
 import { useEffect, useState } from "react";
 import { currencies } from "./Currencies/currencies";
+import { DateAndTime } from "./DateAndTime";
 
 function App() {
   const [inputValue, setInputValue] = useState("");
@@ -22,15 +23,6 @@ function App() {
     }, 1000);
     return () => clearInterval(intervalId);
   }, []);
-
-  const formattedDate = date.toLocaleString(undefined, {
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-    weekday: "long",
-    day: "numeric",
-    month: "long",
-  });
 
   const onChange =
     (setter) =>
@@ -69,7 +61,9 @@ function App() {
   return (
     <Container>
       <SubContainer>
-        <Header title="Currency converter" formattedDate={formattedDate} />
+        
+        <Header title="Currency converter" />
+        <DateAndTime date={date} />
         <SubHeader title="The current exchange rate" />
         <List currencies={currencies} />
         <Form
