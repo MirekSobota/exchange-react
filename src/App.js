@@ -7,7 +7,7 @@ import { Select } from "./Select";
 import { Form } from "./Form";
 import { Result } from "./Result";
 import { SubContainer } from "./SubContainer";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { currencies } from "./Currencies/currencies";
 import { DateAndTime } from "./DateAndTime";
 
@@ -15,15 +15,7 @@ function App() {
   const [inputValue, setInputValue] = useState("");
   const [selectCurrency, setSelectCurrency] = useState("EURO");
   const [result, setResult] = useState("");
-  const [date, setDate] = useState(new Date());
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setDate(new Date());
-    }, 1000);
-    return () => clearInterval(intervalId);
-  }, []);
-
+  
   const onChange =
     (setter) =>
     ({ target }) => {
@@ -61,7 +53,7 @@ function App() {
   return (
     <Container>
       <SubContainer>
-        <DateAndTime date={date} />
+        <DateAndTime />
         <Header title="Currency converter" />
         <SubHeader title="The current exchange rate" />
         <List currencies={currencies} />
