@@ -1,4 +1,4 @@
-import "./style.css";
+import { Input, Button } from "./styled";
 
 const Form = ({
   select,
@@ -8,11 +8,10 @@ const Form = ({
   setInputValue,
 }) => {
   return (
-    <form onSubmit={onFormSubmit} className="form ">
+    <form onSubmit={onFormSubmit}>
       {select}
-      <input
+      <Input
         value={inputValue}
-        className="form__input"
         required
         type="number"
         min="1"
@@ -21,7 +20,7 @@ const Form = ({
         onChange={onChange(setInputValue)}
       />
       <p>
-        <button className="form__button">Exchange</button>
+        <Button>Exchange</Button>
       </p>
     </form>
   );
