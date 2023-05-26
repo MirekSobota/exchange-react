@@ -1,11 +1,7 @@
-import "./style.css";
+import { Content } from "./styled";
 
 const Result = ({ result }) => {
-  return (
-    <p className="returnValue">
-      {result}
-    </p>
-  );
+  return <Content>{result}</Content>;
 };
 
 export { Result };
