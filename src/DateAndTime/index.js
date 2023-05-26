@@ -2,7 +2,6 @@ import { DateTime } from "./styled";
 import { useEffect, useState } from "react";
 
 const DateAndTime = () => {
-
   const [date, setDate] = useState(new Date());
 
   useEffect(() => {
@@ -12,7 +11,6 @@ const DateAndTime = () => {
     return () => clearInterval(intervalId);
   }, []);
 
-
   const formattedDate = date.toLocaleString(undefined, {
     hour: "2-digit",
     minute: "2-digit",
@@ -21,10 +19,7 @@ const DateAndTime = () => {
     day: "numeric",
     month: "long",
   });
-  return (
-    <DateTime>Today is {formattedDate}</DateTime>
-  );
-
+  return <DateTime>Today is {formattedDate}</DateTime>;
 };
 
 export { DateAndTime };

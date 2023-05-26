@@ -1,8 +1,8 @@
-import "./style.css";
+import { Content } from "./styled";
 
 const SubHeader = ({ title }) => (
   <header>
-    <h2 className="subHeader">{title}</h2>
+    <Content>{title}</Content>
   </header>
 );
 

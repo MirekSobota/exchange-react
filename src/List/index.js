@@ -1,4 +1,4 @@
-import {Content, Rates } from "./styled";
+import { Content, Rates } from "./styled";
 
 const List = ({ currencies }) => (
   <Content>
