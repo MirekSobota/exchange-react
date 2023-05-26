@@ -1,4 +1,4 @@
-import "./style.css";
+import { DateTime } from "./styled";
 import { useEffect, useState } from "react";
 
 const DateAndTime = () => {
@@ -22,7 +22,7 @@ const DateAndTime = () => {
     month: "long",
   });
   return (
-    <div className="header__date">Today is {formattedDate}</div>
+    <DateTime>Today is {formattedDate}</DateTime>
   );
 
 };
