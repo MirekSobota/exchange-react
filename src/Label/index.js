@@ -1,6 +1,5 @@
-
 const Label = ({ title, extraLabelContent }) => (
-  <label className="label">
+  <label>
     {title}
     <br />
     {extraLabelContent}

@@ -1,14 +1,14 @@
-import "./style.css";
+import {Content, Rates } from "./styled";
 
 const List = ({ currencies }) => (
-  <ul className="list list__flex">
+  <Content>
     {currencies.map((currency) => (
       <li key={currency.id}>
         {currency.name}
-        <span className="list__rate list__flex">{currency.rate}</span>
+        <Rates>{currency.rate}</Rates>
       </li>
     ))}
-  </ul>
+  </Content>
 );
 
 export { List };
