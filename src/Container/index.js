@@ -1,7 +1,7 @@
 import {Content} from "./styled";
 
 const Container = ({ children }) => (
-  <Content className="container">{children}</Content>
+  <Content>{children}</Content>
 );
 
 export { Container };
