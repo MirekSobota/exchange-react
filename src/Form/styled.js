@@ -6,17 +6,17 @@ export const Input = styled.input`
 
 export const Button = styled.button`
   width: 100%;
-  background: rgb(0, 128, 128);
-  color: white;
+  background: ${({ theme }) => theme.color.teal};
+  color: ${({ theme }) => theme.color.white};
   border: none;
   border-radius: 10px;
   padding: 3px;
 
   &:hover {
-    background: rgb(1, 102, 102);
+    background: ${({ theme }) => theme.color.blueStone};
   }
 
   &:active {
-    background: rgb(1, 82, 82);
+    background: ${({ theme }) => theme.color.sherpaBlue};
   }
 `;

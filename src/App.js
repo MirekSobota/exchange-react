@@ -10,6 +10,8 @@ import { SubContainer } from "./SubContainer";
 import { useState } from "react";
 import { currencies } from "./Currencies/currencies";
 import { DateAndTime } from "./DateAndTime";
+import { ThemeProvider } from "styled-components";
+import { theme } from "./Theme/theme";
 
 function App() {
   const [inputValue, setInputValue] = useState("");
@@ -51,7 +53,8 @@ function App() {
     }`;
 
   return (
-    <Container>
+   <ThemeProvider theme={theme}>
+     <Container>
       <SubContainer>
         <DateAndTime />
         <Header title="Currency converter" />
@@ -78,6 +81,7 @@ function App() {
         <Result result={result} />
       </SubContainer>
     </Container>
+   </ThemeProvider>
   );
 }
 
