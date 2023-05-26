@@ -1,7 +1,7 @@
-import "./style.css";
+import { Content } from "./styled";
 
 const SubContainer = ({ children }) => (
-  <div className="subContainer">{children}</div>
+  <Content className="subContainer">{children}</Content>
 );
 
 export { SubContainer };
