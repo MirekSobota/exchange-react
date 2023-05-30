@@ -10,14 +10,5 @@ export const useCurrentDate = () => {
     return () => clearInterval(intervalId);
   }, []);
 
-  const formattedDate = date.toLocaleString(undefined, {
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-    weekday: "long",
-    day: "numeric",
-    month: "long",
-  });
-
-  return { formattedDate };
+  return { date };
 };
