@@ -11,7 +11,7 @@ import { useState } from "react";
 import { currencies } from "./Currencies/currencies";
 import { DateAndTime } from "./DateAndTime";
 import { ThemeProvider } from "styled-components";
-import { theme } from "./Theme/theme";
+import { theme } from "./theme";
 
 function App() {
   const [inputValue, setInputValue] = useState("");
