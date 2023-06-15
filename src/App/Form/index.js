@@ -55,7 +55,7 @@ const Form = () => {
                   type="number"
                   min="0"
                   step="0.01"
-                  placeholder="Please enter the amount in PLN (Polish złoty)."
+                  placeholder="Please enter the amount in EURO."
                   autoFocus
                   required
                 />
