@@ -8,7 +8,7 @@ Online currency exchange allows you to simply select a currency from the list an
 
 https://mireksobota.github.io/exchange_react/
 
-![Exchange_demo](https://github.com/MirekSobota/exchange_react/blob/main/public/Exchange_demo.gif)
+![Exchange_demo](https://github.com/MirekSobota/exchange_react/blob/main/public/Exchange_New_demo.gif)
 ## Technologies
 - HTML
 - CSS 
