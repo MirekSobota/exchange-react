@@ -1,9 +1,8 @@
-
 export const theme = {
-    color:{
-        teal: "#008080",
-        white: "#ffffff",
-        blueStone: "#016666",
-        sherpaBlue: "#015252",
-    },
+  color: {
+    black: "#000000",
+    crimson: "#db143c",
+    teal: "#008080",
+    white: "#ffffff",
+  },
 };
