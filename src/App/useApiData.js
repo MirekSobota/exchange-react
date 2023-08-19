@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const requestURL = "https://api.exchangerate.host/latest?base=EURO";
+const requestURL = "https://api.exchangerate.host/latest?base=EURO&symbols=USD,EUR,CZK,PLN,";
 
 export const useApiData = () => {
   const [apiData, setApiData] = useState({
@@ -12,7 +12,7 @@ export const useApiData = () => {
     const fetchRates = async () => {
       try {
         const response = await axios.get(requestURL);
-        const { rates, date } = response.data;
+        const { rates, date }= response.data;
 
         setApiData({
           state: "success",
@@ -28,6 +28,6 @@ export const useApiData = () => {
 
     setTimeout(fetchRates, 2000);
   }, []);
-
+console.log(apiData)
   return apiData;
 };
