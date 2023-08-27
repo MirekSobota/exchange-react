@@ -2,7 +2,7 @@
     "name": "Exchange-React",
     "short_name": "Exchange",
     "description": "A simple web application for currency exchange.",
-    "start_url": "https://github.com/MirekSobota/exchange-react",
+    "start_url": "https://mireksobota.github.io/exchange-react/",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#000000",
